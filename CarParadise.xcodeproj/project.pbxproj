@@ -15,6 +15,17 @@
 		F8B330F12A4459590079F153 /* CarParadiseUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8B330F02A4459590079F153 /* CarParadiseUITests.swift */; };
 		F8B330F32A4459590079F153 /* CarParadiseUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8B330F22A4459590079F153 /* CarParadiseUITestsLaunchTests.swift */; };
 		F8B331052A445A3E0079F153 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = F8B331042A445A3E0079F153 /* Alamofire */; };
+		F8B3310A2A445B550079F153 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8B331092A445B550079F153 /* HomeView.swift */; };
+		F8B3310D2A445C370079F153 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8B3310C2A445C370079F153 /* Colors.swift */; };
+		F8B3310F2A445E900079F153 /* TechnicalSpecs.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8B3310E2A445E900079F153 /* TechnicalSpecs.swift */; };
+		F8B3311D2A44697C0079F153 /* Porsche-Next-TT-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F8B331162A44697C0079F153 /* Porsche-Next-TT-Bold.ttf */; };
+		F8B3311E2A44697C0079F153 /* Porsche-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F8B331172A44697C0079F153 /* Porsche-Regular.ttf */; };
+		F8B331202A44697C0079F153 /* PorscheNextTT-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F8B331192A44697C0079F153 /* PorscheNextTT-Italic.ttf */; };
+		F8B331212A44697C0079F153 /* Porsche-Next-TT-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F8B3311A2A44697C0079F153 /* Porsche-Next-TT-Thin.ttf */; };
+		F8B331222A44697C0079F153 /* PorscheNextTT-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F8B3311B2A44697C0079F153 /* PorscheNextTT-BoldItalic.ttf */; };
+		F8B331232A44697C0079F153 /* PorscheNextTT-ThinItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F8B3311C2A44697C0079F153 /* PorscheNextTT-ThinItalic.ttf */; };
+		F8B331252A4472D70079F153 /* Spec.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8B331242A4472D70079F153 /* Spec.swift */; };
+		F8DC58152A44807600F8317B /* Next.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F8DC58142A44807600F8317B /* Next.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +56,18 @@
 		F8B330EC2A4459590079F153 /* CarParadiseUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CarParadiseUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F8B330F02A4459590079F153 /* CarParadiseUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarParadiseUITests.swift; sourceTree = "<group>"; };
 		F8B330F22A4459590079F153 /* CarParadiseUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarParadiseUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		F8B331092A445B550079F153 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		F8B3310C2A445C370079F153 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
+		F8B3310E2A445E900079F153 /* TechnicalSpecs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TechnicalSpecs.swift; sourceTree = "<group>"; };
+		F8B331142A44673C0079F153 /* CarParadise-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "CarParadise-Info.plist"; sourceTree = "<group>"; };
+		F8B331162A44697C0079F153 /* Porsche-Next-TT-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Porsche-Next-TT-Bold.ttf"; sourceTree = "<group>"; };
+		F8B331172A44697C0079F153 /* Porsche-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Porsche-Regular.ttf"; sourceTree = "<group>"; };
+		F8B331192A44697C0079F153 /* PorscheNextTT-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "PorscheNextTT-Italic.ttf"; sourceTree = "<group>"; };
+		F8B3311A2A44697C0079F153 /* Porsche-Next-TT-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Porsche-Next-TT-Thin.ttf"; sourceTree = "<group>"; };
+		F8B3311B2A44697C0079F153 /* PorscheNextTT-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "PorscheNextTT-BoldItalic.ttf"; sourceTree = "<group>"; };
+		F8B3311C2A44697C0079F153 /* PorscheNextTT-ThinItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "PorscheNextTT-ThinItalic.ttf"; sourceTree = "<group>"; };
+		F8B331242A4472D70079F153 /* Spec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Spec.swift; sourceTree = "<group>"; };
+		F8DC58142A44807600F8317B /* Next.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Next.ttf; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,7 +99,7 @@
 		F8B330C92A4459580079F153 = {
 			isa = PBXGroup;
 			children = (
-				F8B330D42A4459580079F153 /*  */,
+				F8B330D42A4459580079F153,
 				F8B330E52A4459590079F153 /* CarParadiseTests */,
 				F8B330EF2A4459590079F153 /* CarParadiseUITests */,
 				F8B330D32A4459580079F153 /* Products */,
@@ -93,9 +116,12 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		F8B330D42A4459580079F153 /*  */ = {
+		F8B330D42A4459580079F153 = {
 			isa = PBXGroup;
 			children = (
+				F8B331152A4469140079F153 /* Fonts */,
+				F8B331142A44673C0079F153 /* CarParadise-Info.plist */,
+				F8B3310B2A445C0A0079F153 /* Extensions */,
 				F8B331022A445A270079F153 /* Services */,
 				F8B331012A445A100079F153 /* Views */,
 				F8B330FF2A4459F70079F153 /* Components */,
@@ -104,7 +130,6 @@
 				F8B330D92A4459590079F153 /* Assets.xcassets */,
 				F8B330DB2A4459590079F153 /* Preview Content */,
 			);
-			name = "";
 			sourceTree = "<group>";
 		};
 		F8B330DB2A4459590079F153 /* Preview Content */ = {
@@ -135,6 +160,8 @@
 		F8B330FF2A4459F70079F153 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				F8B3310E2A445E900079F153 /* TechnicalSpecs.swift */,
+				F8B331242A4472D70079F153 /* Spec.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -142,6 +169,7 @@
 		F8B331012A445A100079F153 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				F8B331092A445B550079F153 /* HomeView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -151,6 +179,28 @@
 			children = (
 			);
 			path = Services;
+			sourceTree = "<group>";
+		};
+		F8B3310B2A445C0A0079F153 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				F8B3310C2A445C370079F153 /* Colors.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		F8B331152A4469140079F153 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				F8B331162A44697C0079F153 /* Porsche-Next-TT-Bold.ttf */,
+				F8B3311A2A44697C0079F153 /* Porsche-Next-TT-Thin.ttf */,
+				F8DC58142A44807600F8317B /* Next.ttf */,
+				F8B331172A44697C0079F153 /* Porsche-Regular.ttf */,
+				F8B3311B2A44697C0079F153 /* PorscheNextTT-BoldItalic.ttf */,
+				F8B331192A44697C0079F153 /* PorscheNextTT-Italic.ttf */,
+				F8B3311C2A44697C0079F153 /* PorscheNextTT-ThinItalic.ttf */,
+			);
+			path = Fonts;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -263,8 +313,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F8B331222A44697C0079F153 /* PorscheNextTT-BoldItalic.ttf in Resources */,
 				F8B330DD2A4459590079F153 /* Preview Assets.xcassets in Resources */,
+				F8B331202A44697C0079F153 /* PorscheNextTT-Italic.ttf in Resources */,
+				F8B331212A44697C0079F153 /* Porsche-Next-TT-Thin.ttf in Resources */,
+				F8B3311E2A44697C0079F153 /* Porsche-Regular.ttf in Resources */,
 				F8B330DA2A4459590079F153 /* Assets.xcassets in Resources */,
+				F8DC58152A44807600F8317B /* Next.ttf in Resources */,
+				F8B3311D2A44697C0079F153 /* Porsche-Next-TT-Bold.ttf in Resources */,
+				F8B331232A44697C0079F153 /* PorscheNextTT-ThinItalic.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -289,8 +346,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F8B3310A2A445B550079F153 /* HomeView.swift in Sources */,
+				F8B3310D2A445C370079F153 /* Colors.swift in Sources */,
+				F8B331252A4472D70079F153 /* Spec.swift in Sources */,
 				F8B330D82A4459580079F153 /* ContentView.swift in Sources */,
 				F8B330D62A4459580079F153 /* CarParadiseApp.swift in Sources */,
+				F8B3310F2A445E900079F153 /* TechnicalSpecs.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -452,6 +513,7 @@
 				DEVELOPMENT_TEAM = 4RVQ5686Z7;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "CarParadise-Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -481,6 +543,7 @@
 				DEVELOPMENT_TEAM = 4RVQ5686Z7;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "CarParadise-Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

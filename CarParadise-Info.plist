@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>UIAppFonts</key>
+	<array>
+		<string>Porsche-Next-TT-Bold.ttf</string>
+		<string>Next.ttf</string>
+		<string>Porsche-Next-TT-Thin.ttf</string>
+		<string>Porsche-Regular.ttf</string>
+		<string>PorscheNextTT-BoldItalic.ttf</string>
+		<string>PorscheNextTT-Italic.ttf</string>
+		<string>PorscheNextTT-ThinItalic.ttf</string>
+	</array>
+</dict>
+</plist>
