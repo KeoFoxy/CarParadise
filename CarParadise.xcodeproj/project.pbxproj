@@ -26,6 +26,8 @@
 		F8B331232A44697C0079F153 /* PorscheNextTT-ThinItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F8B3311C2A44697C0079F153 /* PorscheNextTT-ThinItalic.ttf */; };
 		F8B331252A4472D70079F153 /* Spec.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8B331242A4472D70079F153 /* Spec.swift */; };
 		F8DC58152A44807600F8317B /* Next.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F8DC58142A44807600F8317B /* Next.ttf */; };
+		F8DC58172A448DF300F8317B /* CarInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8DC58162A448DF300F8317B /* CarInfo.swift */; };
+		F8DC58202A44C62500F8317B /* CarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8DC581F2A44C62500F8317B /* CarView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,6 +70,8 @@
 		F8B3311C2A44697C0079F153 /* PorscheNextTT-ThinItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "PorscheNextTT-ThinItalic.ttf"; sourceTree = "<group>"; };
 		F8B331242A4472D70079F153 /* Spec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Spec.swift; sourceTree = "<group>"; };
 		F8DC58142A44807600F8317B /* Next.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Next.ttf; sourceTree = "<group>"; };
+		F8DC58162A448DF300F8317B /* CarInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarInfo.swift; sourceTree = "<group>"; };
+		F8DC581F2A44C62500F8317B /* CarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -162,6 +166,8 @@
 			children = (
 				F8B3310E2A445E900079F153 /* TechnicalSpecs.swift */,
 				F8B331242A4472D70079F153 /* Spec.swift */,
+				F8DC58162A448DF300F8317B /* CarInfo.swift */,
+				F8DC581F2A44C62500F8317B /* CarView.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -347,6 +353,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				F8B3310A2A445B550079F153 /* HomeView.swift in Sources */,
+				F8DC58202A44C62500F8317B /* CarView.swift in Sources */,
+				F8DC58172A448DF300F8317B /* CarInfo.swift in Sources */,
 				F8B3310D2A445C370079F153 /* Colors.swift in Sources */,
 				F8B331252A4472D70079F153 /* Spec.swift in Sources */,
 				F8B330D82A4459580079F153 /* ContentView.swift in Sources */,
