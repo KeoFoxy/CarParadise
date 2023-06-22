@@ -9,7 +9,14 @@ import SwiftUI
 
 struct HomeView: View {
     var body: some View {
-        TechnicalSpecs()
+        VStack{
+            Image("porsche_cayenne_turbo_gt")
+                .resizable()
+                .aspectRatio(contentMode: .fit)
+                .scaleEffect(x: -1, y: 1)
+            CarInfo(CarBrand: "Porsche", CarModel: "Cayenne Turbo GT", CarYear: 2024)
+            TechnicalSpecs()
+        }
     }
 }
 
