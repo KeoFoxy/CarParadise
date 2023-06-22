@@ -14,6 +14,7 @@
 		F8B330E72A4459590079F153 /* CarParadiseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8B330E62A4459590079F153 /* CarParadiseTests.swift */; };
 		F8B330F12A4459590079F153 /* CarParadiseUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8B330F02A4459590079F153 /* CarParadiseUITests.swift */; };
 		F8B330F32A4459590079F153 /* CarParadiseUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8B330F22A4459590079F153 /* CarParadiseUITestsLaunchTests.swift */; };
+		F8B331052A445A3E0079F153 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = F8B331042A445A3E0079F153 /* Alamofire */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F8B331052A445A3E0079F153 /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -74,7 +76,7 @@
 		F8B330C92A4459580079F153 = {
 			isa = PBXGroup;
 			children = (
-				F8B330D42A4459580079F153 /* CarParadise */,
+				F8B330D42A4459580079F153 /*  */,
 				F8B330E52A4459590079F153 /* CarParadiseTests */,
 				F8B330EF2A4459590079F153 /* CarParadiseUITests */,
 				F8B330D32A4459580079F153 /* Products */,
@@ -91,15 +93,18 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		F8B330D42A4459580079F153 /* CarParadise */ = {
+		F8B330D42A4459580079F153 /*  */ = {
 			isa = PBXGroup;
 			children = (
+				F8B331022A445A270079F153 /* Services */,
+				F8B331012A445A100079F153 /* Views */,
+				F8B330FF2A4459F70079F153 /* Components */,
 				F8B330D52A4459580079F153 /* CarParadiseApp.swift */,
 				F8B330D72A4459580079F153 /* ContentView.swift */,
 				F8B330D92A4459590079F153 /* Assets.xcassets */,
 				F8B330DB2A4459590079F153 /* Preview Content */,
 			);
-			path = CarParadise;
+			name = "";
 			sourceTree = "<group>";
 		};
 		F8B330DB2A4459590079F153 /* Preview Content */ = {
@@ -127,6 +132,27 @@
 			path = CarParadiseUITests;
 			sourceTree = "<group>";
 		};
+		F8B330FF2A4459F70079F153 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		F8B331012A445A100079F153 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		F8B331022A445A270079F153 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -143,6 +169,9 @@
 			dependencies = (
 			);
 			name = CarParadise;
+			packageProductDependencies = (
+				F8B331042A445A3E0079F153 /* Alamofire */,
+			);
 			productName = CarParadise;
 			productReference = F8B330D22A4459580079F153 /* CarParadise.app */;
 			productType = "com.apple.product-type.application";
@@ -215,6 +244,9 @@
 				Base,
 			);
 			mainGroup = F8B330C92A4459580079F153;
+			packageReferences = (
+				F8B331032A445A3E0079F153 /* XCRemoteSwiftPackageReference "Alamofire" */,
+			);
 			productRefGroup = F8B330D32A4459580079F153 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -416,15 +448,15 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"CarParadise/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"Preview Content\"";
 				DEVELOPMENT_TEAM = 4RVQ5686Z7;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIStatusBarStyle = UIStatusBarStyleDarkContent;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -452,8 +484,8 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIStatusBarStyle = UIStatusBarStyleDarkContent;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -583,6 +615,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		F8B331032A445A3E0079F153 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		F8B331042A445A3E0079F153 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F8B331032A445A3E0079F153 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = F8B330CA2A4459580079F153 /* Project object */;
 }
