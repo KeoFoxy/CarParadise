@@ -28,6 +28,8 @@
 		F8DC58152A44807600F8317B /* Next.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F8DC58142A44807600F8317B /* Next.ttf */; };
 		F8DC58172A448DF300F8317B /* CarInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8DC58162A448DF300F8317B /* CarInfo.swift */; };
 		F8DC58202A44C62500F8317B /* CarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8DC581F2A44C62500F8317B /* CarView.swift */; };
+		F8DC58222A44F06900F8317B /* FavouriteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8DC58212A44F06900F8317B /* FavouriteView.swift */; };
+		F8DC58252A44F26300F8317B /* FavouriteCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8DC58242A44F26300F8317B /* FavouriteCard.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -72,6 +74,8 @@
 		F8DC58142A44807600F8317B /* Next.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Next.ttf; sourceTree = "<group>"; };
 		F8DC58162A448DF300F8317B /* CarInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarInfo.swift; sourceTree = "<group>"; };
 		F8DC581F2A44C62500F8317B /* CarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarView.swift; sourceTree = "<group>"; };
+		F8DC58212A44F06900F8317B /* FavouriteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouriteView.swift; sourceTree = "<group>"; };
+		F8DC58242A44F26300F8317B /* FavouriteCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouriteCard.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,8 +127,9 @@
 		F8B330D42A4459580079F153 = {
 			isa = PBXGroup;
 			children = (
-				F8B331152A4469140079F153 /* Fonts */,
+				F8DC58232A44F08300F8317B /* Cards */,
 				F8B331142A44673C0079F153 /* CarParadise-Info.plist */,
+				F8B331152A4469140079F153 /* Fonts */,
 				F8B3310B2A445C0A0079F153 /* Extensions */,
 				F8B331022A445A270079F153 /* Services */,
 				F8B331012A445A100079F153 /* Views */,
@@ -176,6 +181,7 @@
 			isa = PBXGroup;
 			children = (
 				F8B331092A445B550079F153 /* HomeView.swift */,
+				F8DC58212A44F06900F8317B /* FavouriteView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -207,6 +213,14 @@
 				F8B3311C2A44697C0079F153 /* PorscheNextTT-ThinItalic.ttf */,
 			);
 			path = Fonts;
+			sourceTree = "<group>";
+		};
+		F8DC58232A44F08300F8317B /* Cards */ = {
+			isa = PBXGroup;
+			children = (
+				F8DC58242A44F26300F8317B /* FavouriteCard.swift */,
+			);
+			path = Cards;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -353,12 +367,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				F8B3310A2A445B550079F153 /* HomeView.swift in Sources */,
+				F8DC58252A44F26300F8317B /* FavouriteCard.swift in Sources */,
 				F8DC58202A44C62500F8317B /* CarView.swift in Sources */,
 				F8DC58172A448DF300F8317B /* CarInfo.swift in Sources */,
 				F8B3310D2A445C370079F153 /* Colors.swift in Sources */,
 				F8B331252A4472D70079F153 /* Spec.swift in Sources */,
 				F8B330D82A4459580079F153 /* ContentView.swift in Sources */,
 				F8B330D62A4459580079F153 /* CarParadiseApp.swift in Sources */,
+				F8DC58222A44F06900F8317B /* FavouriteView.swift in Sources */,
 				F8B3310F2A445E900079F153 /* TechnicalSpecs.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
