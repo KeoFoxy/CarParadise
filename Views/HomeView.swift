@@ -10,6 +10,16 @@ import SwiftUI
 struct HomeView: View {
     var body: some View {
         VStack{
+            HStack {
+                Text("Your current vehicle")
+                    .font(.custom("Porsche Next TT", size: 52).weight(.bold))
+                    .foregroundColor(Color(hex: "#555555"))
+                    .foregroundColor(Color.black)
+                    .multilineTextAlignment(.leading)
+                Spacer()
+            }
+            .padding(20)
+//            Spacer()
             Image("porsche_cayenne_turbo_gt")
                 .resizable()
                 .aspectRatio(contentMode: .fit)
