@@ -8,6 +8,9 @@
 import SwiftUI
 
 struct HomeView: View {
+    
+    let CurrentVehicle: Vehicle
+    
     var body: some View {
         VStack{
             HStack {
@@ -20,18 +23,22 @@ struct HomeView: View {
             }
             .padding(20)
 //            Spacer()
-            Image("porsche_cayenne_turbo_gt")
+            Image(CurrentVehicle.json.imageName)
                 .resizable()
                 .aspectRatio(contentMode: .fit)
                 .scaleEffect(x: -1, y: 1)
-            CarInfo(CarBrand: "Porsche", CarModel: "Cayenne Turbo GT", CarYear: 2024)
-            TechnicalSpecs()
+            CarInfo(CarBrand: CurrentVehicle.api.make, CarModel: CurrentVehicle.api.model, CarYear: CurrentVehicle.api.year)
+            TechnicalSpecs(Acceleration: CurrentVehicle.json.acceleration,
+                           TopSpeed: CurrentVehicle.json.topSpeed,
+                           HP: CurrentVehicle.json.horsepower,
+                           MPG: "\(String(CurrentVehicle.api.combination_mpg))/\(String(CurrentVehicle.api.city_mpg))",
+                           Engine: CurrentVehicle.json.engineType)
         }
     }
 }
 
 struct HomeView_Previews: PreviewProvider {
     static var previews: some View {
-        HomeView()
+        HomeView(CurrentVehicle: PorscheCayenneTurboGT)
     }
 }
