@@ -30,6 +30,9 @@
 		F8DC58202A44C62500F8317B /* CarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8DC581F2A44C62500F8317B /* CarView.swift */; };
 		F8DC58222A44F06900F8317B /* FavouriteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8DC58212A44F06900F8317B /* FavouriteView.swift */; };
 		F8DC58252A44F26300F8317B /* FavouriteCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8DC58242A44F26300F8317B /* FavouriteCard.swift */; };
+		F8DC58282A45FDD400F8317B /* CarModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8DC58272A45FDD400F8317B /* CarModel.swift */; };
+		F8DC582A2A4650AE00F8317B /* TabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8DC58292A4650AE00F8317B /* TabBarView.swift */; };
+		F8DC582C2A46556E00F8317B /* CarDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8DC582B2A46556E00F8317B /* CarDetails.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -76,6 +79,9 @@
 		F8DC581F2A44C62500F8317B /* CarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarView.swift; sourceTree = "<group>"; };
 		F8DC58212A44F06900F8317B /* FavouriteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouriteView.swift; sourceTree = "<group>"; };
 		F8DC58242A44F26300F8317B /* FavouriteCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouriteCard.swift; sourceTree = "<group>"; };
+		F8DC58272A45FDD400F8317B /* CarModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarModel.swift; sourceTree = "<group>"; };
+		F8DC58292A4650AE00F8317B /* TabBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarView.swift; sourceTree = "<group>"; };
+		F8DC582B2A46556E00F8317B /* CarDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarDetails.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -127,8 +133,9 @@
 		F8B330D42A4459580079F153 = {
 			isa = PBXGroup;
 			children = (
-				F8DC58232A44F08300F8317B /* Cards */,
 				F8B331142A44673C0079F153 /* CarParadise-Info.plist */,
+				F8DC58262A45FC5400F8317B /* Models */,
+				F8DC58232A44F08300F8317B /* Cards */,
 				F8B331152A4469140079F153 /* Fonts */,
 				F8B3310B2A445C0A0079F153 /* Extensions */,
 				F8B331022A445A270079F153 /* Services */,
@@ -182,6 +189,7 @@
 			children = (
 				F8B331092A445B550079F153 /* HomeView.swift */,
 				F8DC58212A44F06900F8317B /* FavouriteView.swift */,
+				F8DC58292A4650AE00F8317B /* TabBarView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -219,8 +227,17 @@
 			isa = PBXGroup;
 			children = (
 				F8DC58242A44F26300F8317B /* FavouriteCard.swift */,
+				F8DC582B2A46556E00F8317B /* CarDetails.swift */,
 			);
 			path = Cards;
+			sourceTree = "<group>";
+		};
+		F8DC58262A45FC5400F8317B /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				F8DC58272A45FDD400F8317B /* CarModel.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -367,14 +384,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				F8B3310A2A445B550079F153 /* HomeView.swift in Sources */,
+				F8DC582C2A46556E00F8317B /* CarDetails.swift in Sources */,
 				F8DC58252A44F26300F8317B /* FavouriteCard.swift in Sources */,
 				F8DC58202A44C62500F8317B /* CarView.swift in Sources */,
 				F8DC58172A448DF300F8317B /* CarInfo.swift in Sources */,
 				F8B3310D2A445C370079F153 /* Colors.swift in Sources */,
+				F8DC58282A45FDD400F8317B /* CarModel.swift in Sources */,
 				F8B331252A4472D70079F153 /* Spec.swift in Sources */,
 				F8B330D82A4459580079F153 /* ContentView.swift in Sources */,
 				F8B330D62A4459580079F153 /* CarParadiseApp.swift in Sources */,
 				F8DC58222A44F06900F8317B /* FavouriteView.swift in Sources */,
+				F8DC582A2A4650AE00F8317B /* TabBarView.swift in Sources */,
 				F8B3310F2A445E900079F153 /* TechnicalSpecs.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
