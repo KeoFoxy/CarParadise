@@ -8,20 +8,33 @@
 import SwiftUI
 
 struct FavouriteView: View {
+    
+    /// Structure accepts an array of vehicles
+    
+    let vehicles: [Vehicle]
+    
     var body: some View {
-        ScrollView(.vertical) {
-            FavouriteCard(CarBrand: "Porsche", CarModel: "Cayenne Turbo GT", CarYear: 2024, CarImage: "porsche_cayenne_turbo_gt")
-            FavouriteCard(CarBrand: "Porsche", CarModel: "Cayenne Turbo GT", CarYear: 2024, CarImage: "porsche_cayenne_turbo_gt")
-            FavouriteCard(CarBrand: "Porsche", CarModel: "Cayenne Turbo GT", CarYear: 2024, CarImage: "porsche_cayenne_turbo_gt")
-            FavouriteCard(CarBrand: "Porsche", CarModel: "Cayenne Turbo GT", CarYear: 2024, CarImage: "porsche_cayenne_turbo_gt")
-            FavouriteCard(CarBrand: "Porsche", CarModel: "Cayenne Turbo GT", CarYear: 2024, CarImage: "porsche_cayenne_turbo_gt")
-            FavouriteCard(CarBrand: "Porsche", CarModel: "Cayenne Turbo GT", CarYear: 2024, CarImage: "porsche_cayenne_turbo_gt")
+        ZStack {
+            Color.black//.ignoresSafeArea()
+            ScrollView(.vertical, showsIndicators: false) {
+                ForEach(vehicles, id: \.self) { vehicle in
+                    FavouriteCard(CarBrand: vehicle.api.make,
+                                  CarModel: vehicle.api.model,
+                                  CarYear: vehicle.api.year,
+                                  CarImage: vehicle.json.imageName)
+                }
+            }
         }
     }
 }
 
 struct FavouriteView_Previews: PreviewProvider {
     static var previews: some View {
-        FavouriteView()
+        FavouriteView(vehicles: [PorscheCayenneTurboGT,
+                                 PorschePanameraTurboS,
+                                 Porsche911Targa,
+                                 PorscheTaycanTurboS,
+                                 PorschePanameraTurboS,
+                                 PorscheCayenneTurboGT])
     }
 }
