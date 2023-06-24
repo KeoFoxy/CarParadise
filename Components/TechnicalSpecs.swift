@@ -23,6 +23,7 @@ struct TechnicalSpecs: View {
     ///   - year: Vehicle year. Int type. Will be converted to String
     ///   - combination_mpg: Vehicle combined Miles Per Gallon
     ///   - city_mpg: Vehicle city Miles Per Gallon
+    ///   - cylinders: Future useage for engine type
     
     /// All these parameters come from the API, but the rest are taken from manual
     /// JSON, which is parsed separately, since I have not found a free API that
@@ -35,12 +36,24 @@ struct TechnicalSpecs: View {
     ///   - acceleration: Vehicle 0 to 100 km/h acceleration
     ///   - hp: Vehicle power in horsepower.
     ///   - engine: Vehicle engine type. V8, W12, V6, F6 and etc
+    ///   - imageName: Car image, that is added to assets
+    ///   - topSpeed: Car's top speed, according manufacturer
     /// Maybe I will add something else in the future
     
     /// FIXME: At the moment, for the sake of clarity of the interface construction, stubs are used
     /// TODO: Add converter from MPG to L/100 km
     
-//    var vehicle: Vehicle
+    /// Struture receives data from an object of type Vehicle
+    /// that contains all information about current car
+    /// It must be passed when you select your new favourite car
+    
+    // MARK: Parameters
+    
+    let Acceleration: Double
+    let TopSpeed: Int
+    let HP: Int
+    let MPG: String
+    let Engine: String
     
     var body: some View {
         Specs
@@ -50,16 +63,17 @@ struct TechnicalSpecs: View {
     
     var Specs: some View {
         VStack(spacing: 1) {
-            Spec(systemImgName: "speedometer", specText: "0-100", specValue: "3.1")
-            Spec(systemImgName: "cellularbars", specText: "HP", specValue: "660")
-            Spec(systemImgName: "fuelpump", specText: "MPG", specValue: "19/24")
-            Spec(systemImgName: "engine.combustion", specText: "Engine", specValue: "V8")
+            Spec(systemImgName: "clock", specText: "0-100", specValue: String(Acceleration))
+            Spec(systemImgName: "speedometer", specText: "Top speed", specValue: String(TopSpeed))
+            Spec(systemImgName: "cellularbars", specText: "HP", specValue: String(HP))
+            Spec(systemImgName: "fuelpump", specText: "MPG", specValue: MPG)
+            Spec(systemImgName: "engine.combustion", specText: "Engine", specValue: Engine)
         }
     }
 }
 // MARK: Preview
 struct TechnicalSpecs_Previews: PreviewProvider {
     static var previews: some View {
-        TechnicalSpecs()
+        TechnicalSpecs(Acceleration: 3.1, TopSpeed: 296, HP: 660, MPG: "19/24", Engine: "V8")
     }
 }
