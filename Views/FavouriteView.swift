@@ -15,13 +15,19 @@ struct FavouriteView: View {
     
     var body: some View {
         ZStack {
-            Color.black//.ignoresSafeArea()
+            bgYellow.ignoresSafeArea()
             ScrollView(.vertical, showsIndicators: false) {
                 ForEach(vehicles, id: \.self) { vehicle in
                     FavouriteCard(CarBrand: vehicle.api.make,
                                   CarModel: vehicle.api.model,
                                   CarYear: vehicle.api.year,
                                   CarImage: vehicle.json.imageName)
+//                    .hoverEffect(.automatic)
+//                    .scaleEffect(vehicle.isHovered ? 1.05 : 1.0)
+//                    .animation(.easeInOut(duration: 0.2)) // Анимация эффекта
+//                    .onHover { isHovered in
+//                        vehicle.isHovered = isHovered
+//                    }
                 }
             }
         }
