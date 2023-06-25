@@ -12,27 +12,32 @@ struct HomeView: View {
     let CurrentVehicle: Vehicle
     
     var body: some View {
-        VStack{
-            HStack {
-                Text("Your current vehicle")
-                    .font(.custom("Porsche Next TT", size: 52).weight(.bold))
-                    .foregroundColor(Color(hex: "#555555"))
-                    .foregroundColor(Color.black)
-                    .multilineTextAlignment(.leading)
-                Spacer()
+        ZStack {
+            mainGray
+                .ignoresSafeArea()
+            
+            VStack{
+                HStack {
+                    Text("Your current vehicle")
+                        .font(.custom("Porsche Next TT", size: 52).weight(.bold))
+                        .foregroundColor(Color(hex: "#555555"))
+                        .foregroundColor(Color.black)
+                        .multilineTextAlignment(.leading)
+                    Spacer()
+                }
+                .padding(20)
+                    //            Spacer()
+                Image(CurrentVehicle.json.imageName)
+                    .resizable()
+                    .aspectRatio(contentMode: .fit)
+                    .scaleEffect(x: -1, y: 1)
+                CarInfo(CarBrand: CurrentVehicle.api.make, CarModel: CurrentVehicle.api.model, CarYear: CurrentVehicle.api.year)
+                TechnicalSpecs(Acceleration: CurrentVehicle.json.acceleration,
+                               TopSpeed: CurrentVehicle.json.topSpeed,
+                               HP: CurrentVehicle.json.horsepower,
+                               MPG: "\(String(CurrentVehicle.api.combination_mpg))/\(String(CurrentVehicle.api.city_mpg))",
+                               Engine: CurrentVehicle.json.engineType)
             }
-            .padding(20)
-//            Spacer()
-            Image(CurrentVehicle.json.imageName)
-                .resizable()
-                .aspectRatio(contentMode: .fit)
-                .scaleEffect(x: -1, y: 1)
-            CarInfo(CarBrand: CurrentVehicle.api.make, CarModel: CurrentVehicle.api.model, CarYear: CurrentVehicle.api.year)
-            TechnicalSpecs(Acceleration: CurrentVehicle.json.acceleration,
-                           TopSpeed: CurrentVehicle.json.topSpeed,
-                           HP: CurrentVehicle.json.horsepower,
-                           MPG: "\(String(CurrentVehicle.api.combination_mpg))/\(String(CurrentVehicle.api.city_mpg))",
-                           Engine: CurrentVehicle.json.engineType)
         }
     }
 }
