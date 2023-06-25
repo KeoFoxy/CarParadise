@@ -39,6 +39,13 @@ struct CarDetails: View {
     /// For now there is no free API that provides free imgs by name
     /// Extra difficult is that I need a certain image
     
+    var CarAcceleration: Double
+    var CarTopSpeed: Int
+    var CarHorsePower: Int
+    var CarMPGCombined: Int
+    var CarMPGCity: Int
+    var CarEngineType: String
+    
     // MARK: Default parameters
     
     var FontStyle: String = "Porsche Next TT"
@@ -62,50 +69,33 @@ struct CarDetails: View {
 
     // MARK: Body
     var body: some View {
-        RoundedRectangle(cornerRadius: 10)
-            .fill(.ultraThinMaterial)
-            .shadow(radius: 5)
-            .overlay(
-                HStack {
-                    cardText
-                    Spacer()
-                    image
-                }
-            )
-            .frame(width: .infinity, height: 650)
-            .padding(20)
-    }
-    
-    // MARK: Card text
-    var cardText: some View {
-        VStack(alignment: .leading) {
-            Text(CarBrand.uppercased())
-                .font(.custom(FontStyle, size: BrandFontSize).weight(.bold))
-                .foregroundColor(BrandFontColor)
-                .frame(width: .infinity, alignment: .leading)
+        ZStack {
+            RoundedRectangle(cornerRadius: 10)
+                .fill(.ultraThinMaterial)
+                .shadow(radius: 5)
+                .frame(width: .infinity, height: 600)
+                .padding(20)
             
-            Text("\(String(CarYear).uppercased()) - \(CarModel)")
-                .font(.custom(FontStyle, size: ModelFontSize).weight(.medium))
-                .foregroundColor(ModelFontColor)
-                .multilineTextAlignment(.leading)
+            VStack {
+                CarInfo(CarBrand: CarBrand, CarModel: CarModel, CarYear: CarYear)
+                Image(CarImage)
+                    .resizable()
+                    .aspectRatio(contentMode: .fit)
+                    .scaleEffect(x: -1, y: 1)
+                TechnicalSpecs(Acceleration: CarAcceleration,
+                               TopSpeed: CarTopSpeed,
+                               HP: CarHorsePower,
+                               MPG: "\(String(CarMPGCombined))/\(String(CarMPGCity))",
+                               Engine: CarEngineType)
+                CustomButton(title: "Order", action: {})
+            }
+            .padding(30)
         }
-        .padding(.leading, 10)
-    }
-    
-    // MARK: Image
-    var image: some View {
-        Image(CarImage)
-            .resizable()
-            .offset(x: -100, y: 0)
-            .scaleEffect(x: -1, y: 1)
-            .aspectRatio(contentMode: .fill)
-            .frame(width: 200, height: 180)
-            .clipShape(RoundedRectangle(cornerRadius: 10))
     }
 }
 
 struct CarDetails_Previews: PreviewProvider {
     static var previews: some View {
-        CarDetails(CarBrand: "Porsche", CarModel: "Cayenne Turbo GT", CarYear: 2024, CarImage: "porsche_cayenne_turbo_gt")
+        CarDetails(CarBrand: "Porsche", CarModel: "Cayenne Turbo GT", CarYear: 2024, CarImage: "porsche_cayenne_turbo_gt", CarAcceleration: 3.1, CarTopSpeed: 296, CarHorsePower: 640, CarMPGCombined: 19, CarMPGCity: 24, CarEngineType: "V8")
     }
 }
