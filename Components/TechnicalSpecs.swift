@@ -63,12 +63,17 @@ struct TechnicalSpecs: View {
     
     var Specs: some View {
         VStack(spacing: 1) {
-            Spec(systemImgName: "clock", specText: "0-100", specValue: String(Acceleration))
-            Spec(systemImgName: "speedometer", specText: "Top speed", specValue: String(TopSpeed))
-            Spec(systemImgName: "cellularbars", specText: "HP", specValue: String(HP))
-            Spec(systemImgName: "fuelpump", specText: "MPG", specValue: MPG)
-            Spec(systemImgName: "engine.combustion", specText: "Engine", specValue: Engine)
+//            Divider()
+//                .frame(width: 420)
+            Spec(specText: "0-100", specValue: String(Acceleration))
+            Spec(specText: "Top speed", specValue: String(TopSpeed))
+            Spec(specText: "Max Power", specValue: String(HP))
+            Spec(specText: "MPG", specValue: MPG)
+            Spec(specText: "Engine", specValue: Engine)
+//            Divider()
+//                .frame(width: 420)
         }
+        .padding(10)
     }
 }
 // MARK: Preview

@@ -18,7 +18,6 @@ struct Spec: View {
     /// Variables of this component
     /// which are later used for its customization
 
-    var systemImgName: String
     var specText: String
     var specValue: String
     
@@ -30,7 +29,6 @@ struct Spec: View {
     /// for the text opposite the icon (Spec Text)
     
     var mainFontSize: CGFloat = 20
-    var secondaryFontSize: CGFloat = 12
     
     /// You can also customize the font,
     /// for example, use their custom
@@ -48,26 +46,19 @@ struct Spec: View {
     
     var body: some View {
         HStack(spacing: 10) {
-            Image(systemName: systemImgName)
-                .resizable()
-                .aspectRatio(contentMode: .fit)
-                .frame(width: UIScreen.main.bounds.width * 0.07)
-            /// Set SF symbol image scale to 7% of screen width size
             Text(specText)
                 .foregroundColor(fontColor)
-                .font(.custom(fontStyle, size: secondaryFontSize).weight(.medium))
+                .font(.custom(fontStyle, size: mainFontSize).weight(.medium))
             Spacer()
             Text(specValue)
                 .foregroundColor(fontColor)
                 .font(.custom(fontStyle, size: mainFontSize).weight(.bold))
-                .frame(width: .infinity, alignment: .leading)
         }
-        .frame(width: 350, height: .infinity)
     }
 }
 // MARK: Preview
 struct Spec_Previews: PreviewProvider {
     static var previews: some View {
-        Spec(systemImgName: "speedometer", specText: "0-100", specValue: "3.1")
+        Spec(specText: "0-100", specValue: "3.1")
     }
 }
