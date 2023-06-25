@@ -59,11 +59,12 @@ struct FavouriteCard: View {
     /// to be able to use hex colors
     
     /// Default font size values for brand and model
-
+    
     // MARK: Body
+    
     var body: some View {
         RoundedRectangle(cornerRadius: 10)
-            .fill(Color.white)
+            .fill(mainGray)
             .shadow(radius: 5)
             .overlay(
                 HStack {
@@ -72,7 +73,7 @@ struct FavouriteCard: View {
                     image
                 }
             )
-            .padding(5)
+            .padding(15)
             .frame(width: .infinity, height: 180)
     }
     
