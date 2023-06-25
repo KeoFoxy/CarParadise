@@ -66,17 +66,26 @@ struct CarDetails: View {
     /// to be able to use hex colors
     
     /// Default font size values for brand and model
+    
+    @Binding var isCarDetailsVisible: Bool
 
     // MARK: Body
     var body: some View {
         ZStack {
             RoundedRectangle(cornerRadius: 10)
-                .fill(.ultraThinMaterial)
+                .fill(mainGray)
                 .shadow(radius: 5)
-                .frame(width: .infinity, height: 600)
+                .frame(width: .infinity, height: 620)
                 .padding(20)
             
             VStack {
+                HStack {
+                    Spacer()
+                    CloseButton(action: {
+                        isCarDetailsVisible = false
+                    })
+//                    .padding(.top, 5)
+                }
                 CarInfo(CarBrand: CarBrand, CarModel: CarModel, CarYear: CarYear)
                 Image(CarImage)
                     .resizable()
@@ -87,15 +96,16 @@ struct CarDetails: View {
                                HP: CarHorsePower,
                                MPG: "\(String(CarMPGCombined))/\(String(CarMPGCity))",
                                Engine: CarEngineType)
-                CustomButton(title: "Order", action: {})
+                CustomButton(title: "Drive this car", action: {})
+                    .background(.clear)
             }
             .padding(30)
         }
     }
 }
 
-struct CarDetails_Previews: PreviewProvider {
-    static var previews: some View {
-        CarDetails(CarBrand: "Porsche", CarModel: "Cayenne Turbo GT", CarYear: 2024, CarImage: "porsche_cayenne_turbo_gt", CarAcceleration: 3.1, CarTopSpeed: 296, CarHorsePower: 640, CarMPGCombined: 19, CarMPGCity: 24, CarEngineType: "V8")
-    }
-}
+//struct CarDetails_Previews: PreviewProvider {
+//    static var previews: some View {
+//        CarDetails(CarBrand: "Porsche", CarModel: "Cayenne Turbo GT", CarYear: 2024, CarImage: "porsche_cayenne_turbo_gt", CarAcceleration: 3.1, CarTopSpeed: 296, CarHorsePower: 640, CarMPGCombined: 19, CarMPGCity: 24, CarEngineType: "V8")
+//    }
+//}
