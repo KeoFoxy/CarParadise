@@ -73,7 +73,7 @@ struct FavouriteCard: View {
                     image
                 }
             )
-            .padding(15)
+            .padding(5)
             .frame(width: .infinity, height: 180)
     }
     
