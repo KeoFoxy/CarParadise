@@ -18,7 +18,7 @@ struct HomeView: View {
             
             VStack{
                 HStack {
-                    Text("Your current vehicle")
+                    Text("Your Current Vehicle")
                         .font(.custom("Porsche Next TT", size: 52).weight(.bold))
                         .foregroundColor(Color(hex: "#555555"))
                         .foregroundColor(Color.black)
