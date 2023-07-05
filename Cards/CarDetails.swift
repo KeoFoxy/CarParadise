@@ -86,11 +86,11 @@ struct CarDetails: View {
                     })
 //                    .padding(.top, 5)
                 }
-                CarInfo(CarBrand: CarBrand, CarModel: CarModel, CarYear: CarYear)
-                Image(CarImage)
-                    .resizable()
-                    .aspectRatio(contentMode: .fit)
-                    .scaleEffect(x: -1, y: 1)
+                CarInfo(CarBrand: CarBrand, CarModel: CarModel, CarYear: CarYear, CarImage: CarImage)
+//                Image(CarImage)
+//                    .resizable()
+//                    .aspectRatio(contentMode: .fit)
+//                    .scaleEffect(x: -1, y: 1)
                 TechnicalSpecs(Acceleration: CarAcceleration,
                                TopSpeed: CarTopSpeed,
                                HP: CarHorsePower,
