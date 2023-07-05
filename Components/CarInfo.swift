@@ -29,6 +29,12 @@ struct CarInfo: View {
     
     var CarYear: Int
     
+    var CarImage: String
+    
+    /// Car Image comes from project assets
+    /// For now there is no free API that provides free imgs by name
+    /// Extra difficult is that I need a certain image
+    
     /// Car year in API marked as Int and it Vehicle model it is also an Int
     /// But it must be converted to String to remove comma in thousands
     
@@ -55,6 +61,10 @@ struct CarInfo: View {
     
     var body: some View {
         VStack(alignment: .leading, spacing: -15) {
+            Image(CarImage)
+                .resizable()
+                .aspectRatio(contentMode: .fit)
+                .scaleEffect(x: -1, y: 1)
             Text(CarBrand.uppercased())
                 .font(.custom(FontStyle, size: BrandFontSize).weight(.bold))
                 .foregroundColor(BrandFontColor)
@@ -73,6 +83,6 @@ struct CarInfo: View {
 // MARK: Preview
 struct CarInfo_Previews: PreviewProvider {
     static var previews: some View {
-        CarInfo(CarBrand: "porsche", CarModel: "Cayenne", CarYear: 2024)
+        CarInfo(CarBrand: "porsche", CarModel: "Cayenne", CarYear: 2024, CarImage: "porsche_cayenne_turbo_gt")
     }
 }
