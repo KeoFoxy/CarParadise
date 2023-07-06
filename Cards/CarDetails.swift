@@ -42,19 +42,15 @@ struct CarDetails: View {
                     CloseButton(action: {
                         isCarDetailsVisible = false
                     })
-//                    .padding(.top, 5)
                 }
                 CarInfo(vehicle: vehicle)
-//                Image(CarImage)
-//                    .resizable()
-//                    .aspectRatio(contentMode: .fit)
-//                    .scaleEffect(x: -1, y: 1)
+                
                 TechnicalSpecs(Acceleration: CarAcceleration,
                                TopSpeed: CarTopSpeed,
                                HP: CarHorsePower,
                                MPG: "\(String(CarMPGCombined))/\(String(CarMPGCity))",
                                Engine: CarEngineType)
-                CustomButton(title: "Drive this car", action: {})
+                CustomButton(title: "More details", action: {})
                     .background(.clear)
             }
             .padding(30)
