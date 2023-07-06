@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		F8117BCB2A488C8F00973DF4 /* CarInfoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8117BCA2A488C8F00973DF4 /* CarInfoModel.swift */; };
+		F8117BCD2A572D1900973DF4 /* DataParsing.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8117BCC2A572D1900973DF4 /* DataParsing.swift */; };
+		F8117BD02A57340F00973DF4 /* vehicles.json in Resources */ = {isa = PBXBuildFile; fileRef = F8117BCF2A57340F00973DF4 /* vehicles.json */; };
 		F8B330D62A4459580079F153 /* CarParadiseApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8B330D52A4459580079F153 /* CarParadiseApp.swift */; };
 		F8B330D82A4459580079F153 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8B330D72A4459580079F153 /* ContentView.swift */; };
 		F8B330DA2A4459590079F153 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F8B330D92A4459590079F153 /* Assets.xcassets */; };
@@ -57,6 +59,8 @@
 
 /* Begin PBXFileReference section */
 		F8117BCA2A488C8F00973DF4 /* CarInfoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarInfoModel.swift; sourceTree = "<group>"; };
+		F8117BCC2A572D1900973DF4 /* DataParsing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataParsing.swift; sourceTree = "<group>"; };
+		F8117BCF2A57340F00973DF4 /* vehicles.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = vehicles.json; sourceTree = "<group>"; };
 		F8B330D22A4459580079F153 /* CarParadise.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CarParadise.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F8B330D52A4459580079F153 /* CarParadiseApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarParadiseApp.swift; sourceTree = "<group>"; };
 		F8B330D72A4459580079F153 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -116,6 +120,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F8117BCE2A572EEA00973DF4 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				F8117BCF2A57340F00973DF4 /* vehicles.json */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
 		F8B330C92A4459580079F153 = {
 			isa = PBXGroup;
 			children = (
@@ -139,6 +151,7 @@
 		F8B330D42A4459580079F153 = {
 			isa = PBXGroup;
 			children = (
+				F8117BCE2A572EEA00973DF4 /* Data */,
 				F8B331142A44673C0079F153 /* CarParadise-Info.plist */,
 				F8DC58262A45FC5400F8317B /* Models */,
 				F8DC58232A44F08300F8317B /* Cards */,
@@ -205,6 +218,7 @@
 		F8B331022A445A270079F153 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				F8117BCC2A572D1900973DF4 /* DataParsing.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -365,6 +379,7 @@
 				F8B331212A44697C0079F153 /* Porsche-Next-TT-Thin.ttf in Resources */,
 				F8B3311E2A44697C0079F153 /* Porsche-Regular.ttf in Resources */,
 				F8B330DA2A4459590079F153 /* Assets.xcassets in Resources */,
+				F8117BD02A57340F00973DF4 /* vehicles.json in Resources */,
 				F8DC58152A44807600F8317B /* Next.ttf in Resources */,
 				F8B3311D2A44697C0079F153 /* Porsche-Next-TT-Bold.ttf in Resources */,
 				F8B331232A44697C0079F153 /* PorscheNextTT-ThinItalic.ttf in Resources */,
@@ -404,6 +419,7 @@
 				F8B331252A4472D70079F153 /* Spec.swift in Sources */,
 				F8B330D82A4459580079F153 /* ContentView.swift in Sources */,
 				F8B330D62A4459580079F153 /* CarParadiseApp.swift in Sources */,
+				F8117BCD2A572D1900973DF4 /* DataParsing.swift in Sources */,
 				F8DC58222A44F06900F8317B /* FavouriteView.swift in Sources */,
 				F8DC58302A48522300F8317B /* Palette.swift in Sources */,
 				F8DC582A2A4650AE00F8317B /* TabBarView.swift in Sources */,

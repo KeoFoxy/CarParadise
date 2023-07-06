@@ -1,0 +1,58 @@
+[
+    {
+        "make": "Porsche",
+        "model": "Cayenne Turbo GT",
+        "year": 2024,
+        "drive": "AWD",
+        "city_mpg": 24,
+        "combination_mpg": 19,
+        "cylinders": 8,
+        "acceleration": 3.1,
+        "horsepower": 640,
+        "engineType": "V8",
+        "imageName": "porsche_cayenne_turbo_gt",
+        "topSpeed": 296
+    },
+    {
+        "make": "Porsche",
+        "model": "Panamera Turbo S",
+        "year": 2020,
+        "drive": "AWD",
+        "city_mpg": 27,
+        "combination_mpg": 17,
+        "cylinders": 8,
+        "acceleration": 3.1,
+        "horsepower": 680,
+        "engineType": "V8",
+        "imageName": "porsche-panamera-turbo-s",
+        "topSpeed": 315
+    },
+    {
+        "make": "Porsche",
+        "model": "Taycan Turbo S",
+        "year": 2022,
+        "drive": "AWD",
+        "city_mpg": 0,
+        "combination_mpg": 0,
+        "cylinders": 0,
+        "acceleration": 2.9,
+        "horsepower": 640,
+        "engineType": "Electric",
+        "imageName": "porsche-taycan-turbo-s",
+        "topSpeed": 248
+    },
+    {
+        "make": "Porsche",
+        "model": "911 Targa",
+        "year": 2021,
+        "drive": "AWD",
+        "city_mpg": 16,
+        "combination_mpg": 14,
+        "cylinders": 6,
+        "acceleration": 4.0,
+        "horsepower": 380,
+        "engineType": "F6",
+        "imageName": "porsche-911-targa",
+        "topSpeed": 284
+    }
+]
