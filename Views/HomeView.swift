@@ -31,7 +31,7 @@ struct HomeView: View {
 //                    .resizable()
 //                    .aspectRatio(contentMode: .fit)
 //                    .scaleEffect(x: -1, y: 1)
-                CarInfo(CarBrand: CurrentVehicle.api.make, CarModel: CurrentVehicle.api.model, CarYear: CurrentVehicle.api.year, CarImage: CurrentVehicle.json.imageName)
+                CarInfo(vehicle: CarModel(CarBrand: CurrentVehicle.api.make, CarModel: CurrentVehicle.api.model, CarYear: CurrentVehicle.api.year, CarImage: CurrentVehicle.json.imageName))
                 TechnicalSpecs(Acceleration: CurrentVehicle.json.acceleration,
                                TopSpeed: CurrentVehicle.json.topSpeed,
                                HP: CurrentVehicle.json.horsepower,

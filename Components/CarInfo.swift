@@ -15,63 +15,32 @@ struct CarInfo: View {
     /// And prints data out of it
     /// Now just for visualise UI used hardcoded values
     
-    var CarBrand: String
+    var vehicle: CarModel
+    /// vehicle contains data about vehicle
+    /// such as `Brand`, `Model`, `Year`, `Image`
     
-    /// Car brand comes from vehicle.make == BRAND
-    /// But it is in lower case so it must be converted to capital
-    /// Font size must be much bigger than font size of CarModel
-    
-    var CarModel: String
-    
-    /// Car model also comes from vehicle.model = MODEL
-    /// It will also be converted to capital as well as everything else
-    /// but with smaller font size
-    
-    var CarYear: Int
-    
-    var CarImage: String
-    
-    /// Car Image comes from project assets
-    /// For now there is no free API that provides free imgs by name
-    /// Extra difficult is that I need a certain image
-    
-    /// Car year in API marked as Int and it Vehicle model it is also an Int
-    /// But it must be converted to String to remove comma in thousands
-    
-    var FontStyle: String = "Porsche Next TT"
-    
-    /// Default font style is "Porsche Next TT" but it can be changed
-    /// when you create an instance of CarInfo
-    
-    var BrandFontColor: Color = .black
-    var ModelFontColor: Color = Color(hex: "#555555")
-    
-    var BrandFontSize: CGFloat = 40
-    var ModelFontSize: CGFloat = 20
-    
-    /// Default BrandFontColor is black but it can be changed
-    /// when you create an instance of CarInfo
-    
-    /// ModelFontColor uses an extension for Color
-    /// to be able to use hex colors
-    
-    /// Default font size values for brand and model
+    var style: CarStyle = CarStyle(fontStyle: "Porsche Next TT",
+                                     brandFontColor: .black,
+                                     modelFontColor: Color(hex: "#555555"),
+                                     brandFontSize: 40,
+                                     modelFontSize: 20)
+
     
     // MARK: Body
     
     var body: some View {
         VStack(alignment: .leading, spacing: -15) {
-            Image(CarImage)
+            Image(vehicle.CarImage)
                 .resizable()
                 .aspectRatio(contentMode: .fit)
                 .scaleEffect(x: -1, y: 1)
-            Text(CarBrand.uppercased())
-                .font(.custom(FontStyle, size: BrandFontSize).weight(.bold))
-                .foregroundColor(BrandFontColor)
+            Text(vehicle.CarBrand.uppercased())
+                .font(.custom(style.fontStyle, size: style.brandFontSize).weight(.bold))
+                .foregroundColor(style.brandFontColor)
                 
-            Text("\(String(CarYear).uppercased()) - \(CarModel)")
-                .font(.custom(FontStyle, size: ModelFontSize).weight(.medium))
-                .foregroundColor(ModelFontColor)
+            Text("\(String(vehicle.CarYear).uppercased()) - \(vehicle.CarModel)")
+                .font(.custom(style.fontStyle, size: style.modelFontSize).weight(.medium))
+                .foregroundColor(style.modelFontColor)
             
         }
         .frame(maxWidth: .infinity, alignment: .leading)
@@ -83,6 +52,6 @@ struct CarInfo: View {
 // MARK: Preview
 struct CarInfo_Previews: PreviewProvider {
     static var previews: some View {
-        CarInfo(CarBrand: "porsche", CarModel: "Cayenne", CarYear: 2024, CarImage: "porsche_cayenne_turbo_gt")
+        CarInfo(vehicle: CarModel(CarBrand: "porsche", CarModel: "Cayenne", CarYear: 2024, CarImage: "porsche_cayenne_turbo_gt"))
     }
 }

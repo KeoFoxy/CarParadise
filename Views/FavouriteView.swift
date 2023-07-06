@@ -21,10 +21,10 @@ struct FavouriteView: View {
             bgYellow.ignoresSafeArea()
             ScrollView(.vertical, showsIndicators: false) {
                 ForEach(vehicles, id: \.self) { vehicle in
-                    FavouriteCard(CarBrand: vehicle.api.make,
-                                  CarModel: vehicle.api.model,
-                                  CarYear: vehicle.api.year,
-                                  CarImage: vehicle.json.imageName)
+                    FavouriteCard(vehicle: CarModel(CarBrand: vehicle.api.make,
+                                                    CarModel: vehicle.api.model,
+                                                    CarYear: vehicle.api.year,
+                                                    CarImage: vehicle.json.imageName))
                     .onTapGesture {
                         selectedCard = vehicle
                         isCarDetailsVisible = true
@@ -32,11 +32,10 @@ struct FavouriteView: View {
                 }
             }
             .overlay(
-//                withAnimation(Animation.timingCurve(0.2, 0.8, 0.6, 1.0)) {
-                    CarDetails(CarBrand: selectedCard?.api.make ?? "",
-                               CarModel: selectedCard?.api.model ?? "",
-                               CarYear: selectedCard?.api.year ?? 0,
-                               CarImage: selectedCard?.json.imageName ?? "",
+                CarDetails(vehicle: CarModel(CarBrand: selectedCard?.api.make ?? "",
+                                             CarModel: selectedCard?.api.model ?? "",
+                                             CarYear: selectedCard?.api.year ?? 0,
+                                             CarImage: selectedCard?.json.imageName ?? ""),
                                CarAcceleration: selectedCard?.json.acceleration ?? 0.0,
                                CarTopSpeed: selectedCard?.json.topSpeed ?? 0,
                                CarHorsePower: selectedCard?.json.horsepower ?? 0,
