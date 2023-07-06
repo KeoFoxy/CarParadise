@@ -14,7 +14,7 @@ import Foundation
 /// to loop through the array of vehicles
 /// and create favourite cards
 
-struct Vehicle: Hashable {
+struct Vehicle: Hashable, Codable {
     
     let make: String
     let model: String
