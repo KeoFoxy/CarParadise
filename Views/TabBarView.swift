@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct TabBarView: View {
+    
+    var cars: [Vehicle]
     var body: some View {
         TabView {
             HomeView(CurrentVehicle: PorscheCayenneTurboGT)
@@ -19,7 +21,6 @@ struct TabBarView: View {
                 .tabItem {
                     Label("Favourite", systemImage: "heart")
                 }
-            
 //            CardView()
 //                .tabItem {
 //                    Label("Card", systemImage: "cart")
@@ -35,6 +36,6 @@ struct TabBarView: View {
 
 struct TabBarView_Previews: PreviewProvider {
     static var previews: some View {
-        TabBarView()
+        TabBarView(cars: cars)
     }
 }
