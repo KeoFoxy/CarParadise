@@ -8,12 +8,14 @@
 import SwiftUI
 
 struct ContentView: View {
-    
-    //@State var currentCar: Vehicle
+    @State private var cars: [Vehicle] = []
     
     var body: some View {
-        //HomeView(CurrentVehicle: PorscheCayenneTurboGT)
-        TabBarView()
+        TabBarView(cars: cars)
+            .onAppear(perform: {
+                VehicleParser.shared.loadVehiclesFromJSON()
+                cars = VehicleParser.shared.getVehicles()
+            })
     }
 }
 
