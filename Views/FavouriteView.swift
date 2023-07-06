@@ -21,10 +21,10 @@ struct FavouriteView: View {
             bgYellow.ignoresSafeArea()
             ScrollView(.vertical, showsIndicators: false) {
                 ForEach(vehicles, id: \.self) { vehicle in
-                    FavouriteCard(vehicle: CarModel(CarBrand: vehicle.api.make,
-                                                    CarModel: vehicle.api.model,
-                                                    CarYear: vehicle.api.year,
-                                                    CarImage: vehicle.json.imageName))
+                    FavouriteCard(vehicle: CarModel(CarBrand: vehicle.make,
+                                                    CarModel: vehicle.model,
+                                                    CarYear: vehicle.year,
+                                                    CarImage: vehicle.imageName))
                     .onTapGesture {
                         selectedCard = vehicle
                         isCarDetailsVisible = true
@@ -32,20 +32,19 @@ struct FavouriteView: View {
                 }
             }
             .overlay(
-                CarDetails(vehicle: CarModel(CarBrand: selectedCard?.api.make ?? "",
-                                             CarModel: selectedCard?.api.model ?? "",
-                                             CarYear: selectedCard?.api.year ?? 0,
-                                             CarImage: selectedCard?.json.imageName ?? ""),
-                               CarAcceleration: selectedCard?.json.acceleration ?? 0.0,
-                               CarTopSpeed: selectedCard?.json.topSpeed ?? 0,
-                               CarHorsePower: selectedCard?.json.horsepower ?? 0,
-                               CarMPGCombined: selectedCard?.api.combination_mpg ?? 0,
-                               CarMPGCity: selectedCard?.api.city_mpg ?? 0,
-                               CarEngineType: selectedCard?.json.engineType ?? "",
-                               isCarDetailsVisible: $isCarDetailsVisible)
+                CarDetails(vehicle: CarModel(CarBrand: selectedCard?.make ?? "",
+                                             CarModel: selectedCard?.model ?? "",
+                                             CarYear: selectedCard?.year ?? 0,
+                                             CarImage: selectedCard?.imageName ?? ""),
+                                             CarAcceleration: selectedCard?.acceleration ?? 0.0,
+                                             CarTopSpeed: selectedCard?.topSpeed ?? 0,
+                                             CarHorsePower: selectedCard?.horsepower ?? 0,
+                                             CarMPGCombined: selectedCard?.combination_mpg ?? 0,
+                                             CarMPGCity: selectedCard?.city_mpg ?? 0,
+                                             CarEngineType: selectedCard?.engineType ?? "",
+                                             isCarDetailsVisible: $isCarDetailsVisible)
                         .opacity(isCarDetailsVisible ? 1 : 0)
                         .animation(.easeInOut)
-//                }
             )
         }
     }

@@ -31,12 +31,16 @@ struct HomeView: View {
 //                    .resizable()
 //                    .aspectRatio(contentMode: .fit)
 //                    .scaleEffect(x: -1, y: 1)
-                CarInfo(vehicle: CarModel(CarBrand: CurrentVehicle.api.make, CarModel: CurrentVehicle.api.model, CarYear: CurrentVehicle.api.year, CarImage: CurrentVehicle.json.imageName))
-                TechnicalSpecs(Acceleration: CurrentVehicle.json.acceleration,
-                               TopSpeed: CurrentVehicle.json.topSpeed,
-                               HP: CurrentVehicle.json.horsepower,
-                               MPG: "\(String(CurrentVehicle.api.combination_mpg))/\(String(CurrentVehicle.api.city_mpg))",
-                               Engine: CurrentVehicle.json.engineType)
+                CarInfo(vehicle: CarModel(CarBrand: CurrentVehicle.make,
+                                          CarModel: CurrentVehicle.model,
+                                          CarYear: CurrentVehicle.year,
+                                          CarImage: CurrentVehicle.imageName))
+                
+                TechnicalSpecs(Acceleration: CurrentVehicle.acceleration,
+                               TopSpeed: CurrentVehicle.topSpeed,
+                               HP: CurrentVehicle.horsepower,
+                               MPG: "\(String(CurrentVehicle.combination_mpg))/\(String(CurrentVehicle.city_mpg))",
+                               Engine: CurrentVehicle.engineType)
             }
         }
     }
