@@ -15,9 +15,7 @@ struct CarInfo: View {
     /// And prints data out of it
     /// Now just for visualise UI used hardcoded values
     
-    var vehicle: CarModel
-    /// vehicle contains data about vehicle
-    /// such as `Brand`, `Model`, `Year`, `Image`
+    var vehicle: Vehicle
     
     var style: CarStyle = CarStyle(fontStyle: "Porsche Next TT",
                                      brandFontColor: .black,
@@ -30,15 +28,15 @@ struct CarInfo: View {
     
     var body: some View {
         VStack(alignment: .leading, spacing: -15) {
-            Image(vehicle.CarImage)
+            Image(vehicle.imageName)
                 .resizable()
                 .aspectRatio(contentMode: .fit)
                 .scaleEffect(x: -1, y: 1)
-            Text(vehicle.CarBrand.uppercased())
+            Text(vehicle.make.uppercased())
                 .font(.custom(style.fontStyle, size: style.brandFontSize).weight(.bold))
                 .foregroundColor(style.brandFontColor)
                 
-            Text("\(String(vehicle.CarYear).uppercased()) - \(vehicle.CarModel)")
+            Text("\(String(vehicle.year).uppercased()) - \(vehicle.model)")
                 .font(.custom(style.fontStyle, size: style.modelFontSize).weight(.medium))
                 .foregroundColor(style.modelFontColor)
             
@@ -52,6 +50,6 @@ struct CarInfo: View {
 // MARK: Preview
 struct CarInfo_Previews: PreviewProvider {
     static var previews: some View {
-        CarInfo(vehicle: CarModel(CarBrand: "porsche", CarModel: "Cayenne", CarYear: 2024, CarImage: "porsche_cayenne_turbo_gt"))
+        CarInfo(vehicle: Vehicle(make: "Porsche", model: "Cayenne S Coupe", year: 2024, drive: "AWD", city_mpg: 24, combination_mpg: 19, cylinders: 8, acceleration: 4.7, horsepower: 468, engineType: "V8", imageName: "porsche-cayenne-S2-coupe", topSpeed: 270))
     }
 }

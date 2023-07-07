@@ -9,7 +9,7 @@ import SwiftUI
 
 struct HomeView: View {
     
-    let CurrentVehicle: Vehicle
+    @Binding var CurrentVehicle: Vehicle?
     
     var body: some View {
         ZStack {
@@ -26,21 +26,24 @@ struct HomeView: View {
                     Spacer()
                 }
                 .padding(20)
-                    //            Spacer()
-//                Image(CurrentVehicle.json.imageName)
-//                    .resizable()
-//                    .aspectRatio(contentMode: .fit)
-//                    .scaleEffect(x: -1, y: 1)
-                CarInfo(vehicle: CarModel(CarBrand: CurrentVehicle.make,
-                                          CarModel: CurrentVehicle.model,
-                                          CarYear: CurrentVehicle.year,
-                                          CarImage: CurrentVehicle.imageName))
+                CarInfo(vehicle: Vehicle(make: CurrentVehicle?.make ?? "Porsche",
+                                         model: CurrentVehicle?.model ?? "Cayenne S Coupe",
+                                         year: CurrentVehicle?.year ?? 2024,
+                                         drive: CurrentVehicle?.drive ?? "AWD",
+                                         city_mpg: CurrentVehicle?.city_mpg ?? 24,
+                                         combination_mpg: CurrentVehicle?.combination_mpg ?? 19,
+                                         cylinders: CurrentVehicle?.cylinders ?? 8,
+                                         acceleration: CurrentVehicle?.acceleration ?? 4.7,
+                                         horsepower: CurrentVehicle?.horsepower ?? 468,
+                                         engineType: CurrentVehicle?.engineType ?? "V8",
+                                         imageName: CurrentVehicle?.imageName ?? "porsche-cayenne-S2-coupe",
+                                         topSpeed: CurrentVehicle?.topSpeed ?? 270))
                 
-                TechnicalSpecs(Acceleration: CurrentVehicle.acceleration,
-                               TopSpeed: CurrentVehicle.topSpeed,
-                               HP: CurrentVehicle.horsepower,
-                               MPG: "\(String(CurrentVehicle.combination_mpg))/\(String(CurrentVehicle.city_mpg))",
-                               Engine: CurrentVehicle.engineType)
+                TechnicalSpecs(Acceleration: CurrentVehicle?.acceleration ?? 4.7,
+                               TopSpeed: CurrentVehicle?.topSpeed ?? 270,
+                               HP: CurrentVehicle?.horsepower ?? 468,
+                               MPG: "\(String(CurrentVehicle?.combination_mpg ?? 19))/\(String(CurrentVehicle?.city_mpg ?? 24))",
+                               Engine: CurrentVehicle?.engineType ?? "V8")
             }
         }
     }
@@ -48,6 +51,6 @@ struct HomeView: View {
 
 struct HomeView_Previews: PreviewProvider {
     static var previews: some View {
-        HomeView(CurrentVehicle: PorscheCayenneTurboGT)
+        HomeView(CurrentVehicle: .constant(PorscheCayenneTurboGT))
     }
 }

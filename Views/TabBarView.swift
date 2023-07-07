@@ -9,17 +9,19 @@ import SwiftUI
 
 struct TabBarView: View {
     
+    @State private var selectedVehicle: Vehicle? = nil
+    
     var cars: [Vehicle]
     var body: some View {
         TabView {
-            HomeView(CurrentVehicle: PorscheCayenneTurboGT)
+            HomeView(CurrentVehicle: $selectedVehicle)
                 .tabItem {
                     Label("Home", systemImage: "house")
                 }
             
-            FavouriteView(vehicles: cars)
+            FavouriteView(selectedVehicle: $selectedVehicle, vehicles: cars)
                 .tabItem {
-                    Label("Favourite", systemImage: "heart")
+                    Label("Available", systemImage: "car.2")
                 }
 //            CardView()
 //                .tabItem {

@@ -13,6 +13,7 @@ struct FavouriteView: View {
     
     @State private var isCarDetailsVisible = false
     @State private var selectedCard: Vehicle? = nil
+    @Binding var selectedVehicle: Vehicle?
     
     let vehicles: [Vehicle]
     
@@ -32,17 +33,23 @@ struct FavouriteView: View {
                 }
             }
             .overlay(
-                CarDetails(vehicle: CarModel(CarBrand: selectedCard?.make ?? "",
-                                             CarModel: selectedCard?.model ?? "",
-                                             CarYear: selectedCard?.year ?? 0,
-                                             CarImage: selectedCard?.imageName ?? ""),
-                                             CarAcceleration: selectedCard?.acceleration ?? 0.0,
-                                             CarTopSpeed: selectedCard?.topSpeed ?? 0,
-                                             CarHorsePower: selectedCard?.horsepower ?? 0,
-                                             CarMPGCombined: selectedCard?.combination_mpg ?? 0,
-                                             CarMPGCity: selectedCard?.city_mpg ?? 0,
-                                             CarEngineType: selectedCard?.engineType ?? "",
-                                             isCarDetailsVisible: $isCarDetailsVisible)
+                CarDetails(vehicle: Vehicle(make: selectedCard?.make ?? "",
+                                            model: selectedCard?.model ?? "",
+                                            year: selectedCard?.year ?? 0,
+                                            drive: selectedCard?.drive ?? "AWD",
+                                            city_mpg: selectedCard?.city_mpg ?? 24,
+                                            combination_mpg: selectedCard?.combination_mpg ?? 19,
+                                            cylinders: selectedCard?.cylinders ?? 8,
+                                            acceleration: selectedCard?.acceleration ?? 4.7,
+                                            horsepower: selectedCard?.horsepower ?? 468,
+                                            engineType: selectedCard?.engineType ?? "V8",
+                                            imageName: selectedCard?.imageName ?? "porsche-cayenne-S2-coupe",
+                                            topSpeed: selectedCard?.topSpeed ?? 270),
+                           
+                           isCarDetailsVisible: $isCarDetailsVisible,
+                           selectedVehicle: $selectedVehicle)
+                           
+                           
                         .opacity(isCarDetailsVisible ? 1 : 0)
                         .animation(.easeInOut)
             )
@@ -52,7 +59,8 @@ struct FavouriteView: View {
 
 struct FavouriteView_Previews: PreviewProvider {
     static var previews: some View {
-        FavouriteView(vehicles: [PorscheCayenneTurboGT,
+        FavouriteView(selectedVehicle: .constant(PorschePanameraTurboS), vehicles:
+                                 [PorscheCayenneTurboGT,
                                  PorschePanameraTurboS,
                                  Porsche911Targa,
                                  PorscheTaycanTurboS,
@@ -60,3 +68,4 @@ struct FavouriteView_Previews: PreviewProvider {
                                  PorscheCayenneTurboGT])
     }
 }
+

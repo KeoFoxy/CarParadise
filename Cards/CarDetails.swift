@@ -16,16 +16,17 @@ struct CarDetails: View {
     
     // MARK: Parameters
     
-    var vehicle: CarModel
+    var vehicle: Vehicle
         
-    var CarAcceleration: Double
-    var CarTopSpeed: Int
-    var CarHorsePower: Int
-    var CarMPGCombined: Int
-    var CarMPGCity: Int
-    var CarEngineType: String
+//    var CarAcceleration: Double
+//    var CarTopSpeed: Int
+//    var CarHorsePower: Int
+//    var CarMPGCombined: Int
+//    var CarMPGCity: Int
+//    var CarEngineType: String
     
     @Binding var isCarDetailsVisible: Bool
+    @Binding var selectedVehicle: Vehicle?
 
     // MARK: Body
     var body: some View {
@@ -45,12 +46,14 @@ struct CarDetails: View {
                 }
                 CarInfo(vehicle: vehicle)
                 
-                TechnicalSpecs(Acceleration: CarAcceleration,
-                               TopSpeed: CarTopSpeed,
-                               HP: CarHorsePower,
-                               MPG: "\(String(CarMPGCombined))/\(String(CarMPGCity))",
-                               Engine: CarEngineType)
-                CustomButton(title: "More details", action: {})
+                TechnicalSpecs(Acceleration: vehicle.acceleration,
+                               TopSpeed: vehicle.topSpeed,
+                               HP: vehicle.horsepower,
+                               MPG: "\(String(vehicle.combination_mpg))/\(String(vehicle.city_mpg))",
+                               Engine: vehicle.engineType)
+                CustomButton(title: "Order", action: {
+                    selectedVehicle = vehicle
+                })
                     .background(.clear)
             }
             .padding(30)
@@ -58,8 +61,8 @@ struct CarDetails: View {
     }
 }
 
-//struct CarDetails_Previews: PreviewProvider {
-//    static var previews: some View {
-//        CarDetails(CarBrand: "Porsche", CarModel: "Cayenne Turbo GT", CarYear: 2024, CarImage: "porsche_cayenne_turbo_gt", CarAcceleration: 3.1, CarTopSpeed: 296, CarHorsePower: 640, CarMPGCombined: 19, CarMPGCity: 24, CarEngineType: "V8")
-//    }
-//}
+struct CarDetails_Previews: PreviewProvider {
+    static var previews: some View {
+        CarDetails(vehicle: Vehicle(make: "Porsche", model: "Cayenne S Coupe", year: 2024, drive: "AWD", city_mpg: 24, combination_mpg: 19, cylinders: 8, acceleration: 4.7, horsepower: 468, engineType: "V8", imageName: "porsche-cayenne-S2-coupe", topSpeed: 270), isCarDetailsVisible: .constant(true), selectedVehicle: .constant(PorschePanameraTurboS))
+    }
+}
