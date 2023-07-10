@@ -4,11 +4,13 @@
 
 ## Preview
 
-<img src="Images/main.PNG" height='300' align=''>
-<img src="Images/available1.PNG" height='300' align=''>
-<img src="Images/available2.PNG" height='300' align=''>
-<img src="Images/details1.PNG" height='300' align=''>
-<img src="Images/newMain.PNG" height='300' align=''>
+<div style="display: flex;">
+   <img src="Images/main.PNG" height='300' align=''>
+   <img src="Images/available1.PNG" height='300' align=''>
+   <img src="Images/available2.PNG" height='300' align=''>
+   <img src="Images/details1.PNG" height='300' align=''>
+   <img src="Images/newMain.PNG" height='300' align=''>
+</div>
 
 <img src="/Images/preview.gif" height='300'>
 
