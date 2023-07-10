@@ -1,6 +1,6 @@
 # CarParadise
 
-<img src="img/TicTacToe.png" height='450' align='center'>
+CarParadise is an iOS application built with Swift and SwiftUI that provides Porsche car rental services. With our app, you can easily and conveniently rent prestigious cars to suit your needs.
 
 ## Preview
 
@@ -12,33 +12,32 @@
    <img src="Images/newMain.PNG" height='300' align=''>
 </div>
 
-<img src="/Images/preview.gif" height='300'>
-
-## Features
-
-- Simple and intuitive user interface.
-- Animated background.
-- PvE.
-- Game board that automatically updates after each move.
-- Hard AI.
-- Score board and reset button.
+---
 
 ## Planned
 
-- Choose AI difficulty.
-- Choose colors of your playground.
-- PvP.
+- Get info about cars via API
+- Create custom navigation bar
+- Create an account view
+- Design custom icons
+- Add map
+- Add a comparison
 
 ## Requirements
 
-- iOS 16.4 or later.
+ - iOS 16.0 or later
+ - Xcode 14.0 or later
+
+## Contribution
+
+If you find any issues or want to contribute to the project, please create a Pull Request or make an Issue in this repository.
 
 ## Installation
 
 1. Clone the Tic Tac Toe repository:
 
    ```shell
-   git clone git@github.com:KeoFoxy/Tic-Tac-Toe.git
+   git@github.com:KeoFoxy/CarParadise.git
    ```
-2. Open the `Tic-Tac-Toe.xcodeproj` project in Xcode.
+2. Open the `CarParadise.xcodeproj` project in Xcode.
 3. Build and run the project on a simulator or a real device.
